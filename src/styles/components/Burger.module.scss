@@ -1,0 +1,36 @@
+.mainMenu__container {
+  cursor: pointer;
+  display: none; /* Скрываем гамбургер на больших экранах */
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+
+  &.is-open .mainMenu__menuBar:first-child {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  &.is-open .mainMenu__menuBar:nth-child(2) {
+    opacity: 0;
+  }
+
+  &.is-open .mainMenu__menuBar:last-child {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+
+.mainMenu__menuBar {
+  width: 30px;
+  height: 3px;
+  background-color: var(--color-menu);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+@media (max-width: 767px) {
+
+  .mainMenu__container {
+    display: flex; /* Показываем гамбургер на малых экранах */
+  }
+
+  .mainMenu__container.modal-open {
+    display: none; /* Скрываем гамбургер, когда открыто модальное окно */
+  }
+}

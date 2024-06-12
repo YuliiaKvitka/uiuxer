@@ -1,0 +1,29 @@
+@import '../utils/_mixins';
+
+.home-pages {
+
+    &__inner {
+        margin-inline: auto;
+    }
+
+    &__text {
+        margin-top: 10px;
+        max-width: 803px;
+        margin-inline: auto;
+
+        @include tablet-landscape {
+            margin-top: 20px;
+            max-width: 680px;
+        }
+
+        @include tablet-portrait {
+            margin-top: 20px;
+            max-width: 550px;
+        }
+
+        @include small {
+            margin-top: 20px;
+            max-width: 300px;
+        }
+    }
+}

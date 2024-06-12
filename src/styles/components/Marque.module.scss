@@ -1,0 +1,61 @@
+@import '../utils/mixins';
+
+
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.marqueeContainer {
+    height: 55px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: transparent; // Цвет фона
+    overflow: hidden;
+}
+
+.marquee {
+    width: 80%; // Ограничение ширины бегущей строки
+    overflow: hidden;
+    white-space: nowrap; // Предотвращает перенос строк
+    background-color: transparent; // Цвет фона
+}
+
+.marqueeContent {
+    display: flex;
+    animation: marquee 10s linear infinite; // Настройте скорость анимации
+}
+
+.marqueeItem {
+    width: 360px;
+    display: inline-flex;
+    align-items: center;
+    margin-right: 50px; // Расстояние между элементами
+}
+
+.text {
+    margin-left: 8px;
+    font-family: "Mulish", sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 1.5;
+    letter-spacing: 0.01em;
+    color: #242f65;
+
+    @include tablet-portrait {
+           //(min-width: 576px) and (max-width: 767.98px)
+           font-size: 24px;
+        }
+
+        @include small {
+            //(min-width: 360px) and (max-width: 575.98px) 
+            font-size: 20px;
+        }
+        }
+

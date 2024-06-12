@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat+Subrayada:700');
+@import url('https://fonts.googleapis.com/css?family=Graduate');
+
+$cb: cubic-bezier(0.41, 0.95, 0.55, 0.06);
+
+// body {
+//   background: #95a5a6;
+//   text-align: center;
+// }
+
+.bp {
+  -webkit-perspective: 400px;
+  margin-bottom: 150px;
+}
+
+.sign {
+  position: relative;
+  height: 300px;
+  width: 500px;
+  background: #f0c40f;
+  border: 20px solid black;
+  border-radius: 80px;
+  margin: auto;
+  line-height: 45%;
+  margin-top: 2%;
+  text-align: center;
+  box-shadow: 0 0 100px 30px #0d0d0d;
+  font-family: 'Montserrat Subrayada', sans-serif;
+  font-size: 200px;
+  animation: i404 6s infinite $cb;
+}
+.wrapper {
+    display: flex;
+    justify-content: center;
+}
+.yay {
+  font-family: 'Graduate', cursive;
+  animation: ierr 0.3s infinite $cb;
+  font-size: 150px;
+  
+}
+
+.br {
+  animation: ii404 1s infinite $cb;
+ 
+}
+
+@keyframes ii404 {
+  0% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(-10deg);
+  }
+}
+
+@keyframes i404 {
+  0% {
+    transform: rotateY(30deg);
+  }
+  50% {
+    transform: rotateY(-30deg);
+  }
+  100% {
+    transform: rotateY(30deg);
+  }
+}
+
+@keyframes ierr {
+  50% {
+    color: red;
+  }
+}

@@ -1,0 +1,321 @@
+// @import '../utils/variables';
+@import '../utils/mixins';
+
+
+.footer {
+
+    height: auto;
+    width:100vw;
+    background: url('/assets/footer/footer-bg.png') center/contain no-repeat;
+    background-size: cover;
+
+    &__inner {
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__image-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include hd-desktop {
+            margin-inline: auto;
+            width: 205px;
+            height: 205px;
+        }
+
+        @include very-large-desktop {
+            margin-inline: auto;
+            width: 205px;
+            height: 205px;
+        }
+
+        @include large-desktop {
+            //min-width: 1200px
+            margin-top: 116px;
+            margin-inline: auto;
+            width: 205px;
+            height: 205px;
+            }
+
+        @include desktop {
+               //(min-width: 992px) and (max-width: 1199.98px)
+            margin-inline: auto;
+            width: 150px;
+            height: 150px;
+            margin-top: 80px;
+        }
+
+        @include tablet-landscape {
+            margin-inline: auto;
+            width: 150px;
+            height: 150px;
+            margin-top: 50px;
+        }
+
+        @include tablet-portrait {
+            margin-inline: auto;
+            width: 100px;
+            height: 100px;
+            margin-top: 50px;
+        }
+
+        @include small {
+            margin-inline: auto;
+            width: 100px;
+            height: 100px;
+            margin-top: 50px;
+        }
+    }
+
+    &__crawl-line{
+        margin-bottom: 90px;
+
+        @include hd-desktop {
+       
+        }
+
+        @include very-large-desktop {
+          
+        }
+
+        @include large-desktop {
+             //min-width: 1200px
+             margin-bottom: 80px;
+           
+            }
+
+        @include desktop {
+            //(min-width: 992px) and (max-width: 1199.98px)
+            margin-bottom: 50px;
+        }
+
+        @include tablet-landscape {
+          //(min-width: 768px) and (max-width: 991.98px)
+           margin-bottom: 50px;
+        }
+
+        @include tablet-portrait {
+           //(min-width: 576px) and (max-width: 767.98px)
+           margin-bottom: 50px;
+        }
+
+        @include small {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__line{
+        width: 1420px;
+        height: 1px;
+        background: #d092ba;
+    }
+
+    &__wrapper {
+        margin-top: 122px;
+        margin-bottom: 40px;
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 16px;
+
+        @include large-desktop {
+           //min-width: 1200px
+            margin-top: 100px;
+            }
+
+        @include desktop {
+            //(min-width: 992px) and (max-width: 1199.98px)
+            margin-top: 50px;
+        }
+
+        @include tablet-landscape {
+          //(min-width: 768px) and (max-width: 991.98px)
+            gap: 10px;
+            margin-top: 50px;
+        }
+
+        @include tablet-portrait {
+           //(min-width: 576px) and (max-width: 767.98px)
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 50px;
+            gap: 10px;
+        }
+
+        @include small {
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 50px;
+            gap: 10px;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 215px;
+
+        @include hd-desktop {
+       
+        }
+
+        @include very-large-desktop {
+          
+        }
+
+        @include large-desktop {
+           
+            }
+
+        @include desktop {
+           
+        }
+
+        @include tablet-landscape {
+          //(min-width: 768px) and (max-width: 991.98px)
+          gap: 5px;
+        }
+
+        @include tablet-portrait {
+           gap: 5px;
+        }
+
+        @include small {
+           gap: 5px; 
+           width: 150px;
+        }
+    }
+
+    &__item {
+        color: rgb(36, 47, 101);
+        font-family: Fraunces, serif; //Fraunces;
+        font-size: 25px;
+        font-weight: 400;
+        line-height: 37.5px;
+        letter-spacing: 0.4px;
+        text-align: left;
+
+        @include hd-desktop {
+       
+        }
+
+        @include very-large-desktop {
+          
+        }
+
+        @include large-desktop {
+           
+            }
+
+        @include desktop {
+           
+        }
+
+        @include tablet-landscape {
+          //(min-width: 768px) and (max-width: 991.98px)
+
+           font-size: 20px;
+        }
+
+        @include tablet-portrait {
+           
+        }
+
+        @include small {
+            font-size: 20px;
+        }
+    }
+
+    &__copyright {
+        padding-block: 20px;
+        display: flex;
+        flex-direction: row;
+        gap: 4px;
+
+        @include hd-desktop {
+       
+        }
+
+        @include very-large-desktop {
+          
+        }
+
+        @include large-desktop {
+           
+            }
+
+        @include desktop {
+            //(min-width: 992px) and (max-width: 1199.98px)
+             padding-block: 10px;
+        }
+
+        @include tablet-landscape {
+          
+        }
+
+        @include tablet-portrait {
+           //(min-width: 576px) and (max-width: 767.98px)
+        flex-direction: column;
+        }
+
+        @include small {
+            flex-direction: column;
+        }
+
+        &-text {
+            font-family: "Mulish", sans-serif;
+            font-weight: 400;
+            font-size: 20px; 
+            line-height: 1.5;
+            letter-spacing: 0.02em;
+            text-align: center;
+            color: #242f65;
+
+
+        @include tablet-portrait {
+           font-size: 18px; 
+        }
+
+        @include small {
+            font-size: 16px; 
+        }
+        }
+    }
+
+    
+
+
+}
+
+
+// @include hd-desktop {
+       
+//         }
+
+//         @include very-large-desktop {
+          
+//         }
+
+//         @include large-desktop {
+           
+//             }
+
+//         @include desktop {
+           
+//         }
+
+//         @include tablet-landscape {
+          
+//         }
+
+//         @include tablet-portrait {
+           
+//         }
+
+//         @include small {
+            
+//         }

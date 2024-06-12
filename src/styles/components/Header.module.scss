@@ -1,0 +1,89 @@
+// Header.module.scss
+@import '../utils/_mixins';
+.header {
+  height: 70px;
+  padding: 50px 0;
+
+  @include tablet-landscape {
+         padding: 40px 0;
+       }
+}
+
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  flex: 1;
+}
+
+.mainMenu {
+  display: flex;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+
+    
+  @include tablet-landscape {
+        gap: 60px;
+       }
+  }
+
+  &__item {
+    font-size: 20px;
+    line-height: 1.5;
+    color: var(--color-menu);
+    background-image: linear-gradient(var(--color-menu) 50%, var(--accent-color-1) 50%);
+    background-size: 100% 200%;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    transition: all 550ms ease-in-out;
+
+    &:hover {
+      background-position: 0% 100%;
+    }
+  }
+}
+
+
+
+
+.modalMenu {
+  list-style-type: none;
+  padding: 0;
+
+  &__list {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__item {
+    font-size: 20px;
+    line-height: 1.5;
+    color: var(--color-menu);
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: var(--accent-color-1);
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .mainMenu {
+    display: none; /* Скрываем главное меню на малых экранах */
+  }
+
+}
+
